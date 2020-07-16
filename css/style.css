@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(135deg, white, #fff5f5) center center no-repeat fixed;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body header {
+  margin: 30px;
+}
+body header .logo {
+  height: 20px;
+}
+body .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+body .container .img-section {
+  background: url(../images/hero-mobile.jpg) center center no-repeat;
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+}
+body .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  min-height: 50vh;
+  padding: 0 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+body .container .content .title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 15px;
+  line-height: 1;
+  margin-bottom: 35px;
+  color: #413a3a;
+}
+body .container .content .title span {
+  font-weight: 200;
+  color: #ce9797;
+  display: block;
+}
+body .container .content .subtitle {
+  color: #ce9797;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+body .container .content .email-subs {
+  position: relative;
+}
+body .container .content .email-subs input {
+  color: #ce9797;
+  font-size: 1rem;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #ce9797;
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+body .container .content .email-subs input:focus {
+  outline: none;
+}
+body .container .content .email-subs input::placeholder {
+  color: #ce9797;
+}
+body .container .content .email-subs button {
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border: 1px solid #ce9797;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .container .content .email-subs button:hover {
+  background: linear-gradient(135deg, white, #fff5f5);
+}
+body .container .content .email-subs button:focus {
+  outline: none;
+}
+body .container .content .email-subs .error-icon {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 110px;
+}
+body .container .content .email-subs .error-msg {
+  color: #f96262;
+  display: none;
+  text-align: left;
+  margin-top: 11px;
+  margin-left: 30px;
+}
+body .container .content .email-subs.error input {
+  border: 1px solid #f96262;
+}
+body .container .content .email-subs.error .error-icon {
+  display: block;
+}
+body .container .content .email-subs.error .error-msg {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+  }
+  body header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 55px 0 0 165px;
+  }
+  body header .logo {
+    height: 42px;
+  }
+  body .container {
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+  body .container .img-section {
+    width: 40%;
+    height: 100%;
+    background: url("../images/hero-desktop.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  body .container .content {
+    background: url(../images/bg-pattern-desktop.svg) center center no-repeat;
+    background-size: cover;
+    width: 60%;
+    padding: 0 320px 0 165px;
+    text-align: left;
+  }
+  body .container .content .title {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  body .container .content .subtitle {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+$grayish-red: hsl(0, 6%, 24%);
+$linear1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$linear2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $linear1 center center no-repeat fixed;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  header {
+    margin: 30px;
+    .logo {
+      height: 20px;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .img-section {
+      background: url(../images/hero-mobile.jpg) center center no-repeat;
+      background-size: cover;
+      height: 30vh;
+      width: 100%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 20px;
+      min-height: 50vh;
+      padding: 0 30px;
+      text-align: center;
+      margin-bottom: 30px;
+      .title {
+        text-transform: uppercase;
+        font-size: 3rem;
+        letter-spacing: 15px;
+        line-height: 1;
+        margin-bottom: 35px;
+        color: $grayish-red;
+        span {
+          font-weight: 200;
+          color: $desaturated-red;
+          display: block;
+        }
+      }
+      .subtitle {
+        color: $desaturated-red;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+
+      .email-subs {
+        position: relative;
+        input {
+          color: $desaturated-red;
+          font-size: 1rem;
+          width: 100%;
+          background: transparent;
+          border: 1px solid $desaturated-red;
+          padding: 15px 30px;
+          border-radius: 50px;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: $desaturated-red;
+          }
+        }
+        button {
+          width: 100px;
+          height: 50px;
+          background: $linear2;
+          border: 1px solid $desaturated-red;
+          border-radius: 50px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          &:hover {
+            background: $linear1;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .error-icon {
+          display: none;
+          position: absolute;
+          top: 14px;
+          right: 110px;
+        }
+
+        .error-msg {
+          color: $soft-red;
+          display: none;
+          text-align: left;
+          margin-top: 11px;
+          margin-left: 30px;
+        }
+        &.error {
+          input {
+            border: 1px solid $soft-red;
+          }
+          .error-icon {
+            display: block;
+          }
+          .error-msg {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    height: 100vh;
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin: 55px 0 0 165px;
+      .logo {
+        height: 42px;
+      }
+    }
+    .container {
+      flex-direction: row-reverse;
+      height: 100%;
+      .img-section {
+        width: 40%;
+        height: 100%;
+        background: url("../images/hero-desktop.jpg") center center no-repeat;
+        background-size: cover;
+      }
+      .content {
+        background: url(../images/bg-pattern-desktop.svg) center center
+          no-repeat;
+        background-size: cover;
+        // margin-top: 60px;
+        // height: 100%;
+        width: 60%;
+        padding: 0 320px 0 165px;
+        text-align: left;
+        .title {
+          font-size: 60px;
+          line-height: 1.2;
+        }
+        .subtitle {
+          font-size: 16px;
+        }
+
+        // .email-subs {
+        //   input {
+        //     height: 4rem;
+        //   }
+        //   button {
+        //     height: 4rem;
+        //   }
+        // }
+      }
+    }
+  }
+}
